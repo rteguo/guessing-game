@@ -5,20 +5,21 @@ from random import randint
 print("Welcome to game")
 name = input ("what's your name ? :")
 secret_number = random.randint(1, 10)
-print(secret_number)
+# print(secret_number)
 print(name, 'I am thinking of a number between 1 and 100')
-compt = 1
+compt = 0
 while (True):
     guess = int(input("Your guess ? : "))
-    if(guess < 0 or guess > 100):
-       print(name, 'Your guess is not between 1 and 100, try again')  
-    else:
-        if( guess < secret_number ):
-            print(name, 'Your guess is too low, try again')
-        else:
-            if ( guess > secret_number):
-                print(name, 'Your guess is too hight, try again')
-        if (guess == secret_number) : 
-            print('Well done', name, '! You found my number in', compt, ' tries! ')
-            break
     compt += 1
+    if int(guess) == False:
+        print(name, 'Your guess is not an integer, try again')
+    elif(guess < 0 or guess > 100):
+        print(name, 'Your guess is not between 1 and 100, try again')  
+    elif( guess < secret_number ):
+        print(name, 'Your guess is too low, try again')
+    elif ( guess > secret_number):
+        print(name, 'Your guess is too hight, try again')
+    elif (guess == secret_number) : 
+        print('Well done', name, '! You found my number in', compt, ' tries! ')
+        break
+    
