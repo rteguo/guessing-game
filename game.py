@@ -1,7 +1,7 @@
 """A number-guessing game."""
 import random
 from random import randint
-# Put your code here
+# Put your code here.
 print("Welcome to game")
 name = input ("what's your name ? :")
 secret_number = random.randint(1, 10)
